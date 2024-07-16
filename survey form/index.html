@@ -1,76 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Survey form</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Survey form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <header class="header">
-<hgroup>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">Thank you For taking the time to tell us how we are doing!</p>
-  </hgroup>
-  </header>
-  <main>
-  <form id="survey-form" action="/action_page.php" method="get">
-    <div class="form-container">
-      <label id="name-label" class="form-text" for="name">Full Name:
-        <input class="form-text" id="name" type="text" placeholder="Enter name here" required>
-      </label>
-      <label id="email-label" class="form-text" for="email">Email:
-        <input class="form-text" id="email" type="email" placeholder="email@text.com" required>
-      </label>
-      <label id="number-label" class="form-text" for="number">Age:
-        <input class="form-text" id="number" type="number" min="13" max="120" placeholder="...">
-      </label>
-      <label id="dropdown-label" for="dropdown">
-        How did you hear about us?
-        <select class="form-text" id="dropdown">
-          <option>--please choose one--</option>
-          <option>Friend</option>
-          <option>Billboard</option>
-          <option>Online</option>
-          <option>Television</option>
-        </select>
-      </label>
+    <header class="header">
+        <hgroup>
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Please fill out the form below to tell us how we are doing.</p>
+        </hgroup>
+    </header>
 
-        <label id="rate-label" for="checkbox">On a scale of 1 through 5, 5 being the best, please rate our service.
-        </label>
-        <div class="radio-container">
-      <input class="radio" type="radio" name="radioname" value="1">1
-      <input class="radop" type="radio" name="radioname" value="2">2
-      <input class="radio" type="radio" name="radioname" value="3">3
-      <input class="radop" type="radio" name="radioname" value="4">4
-      <input class="radio" type="radio" name="radioname" value="5">5
+    <main>
 
-    </div>
-      <label id="radio-label" for="radioname">Would you recommend us?
-        <input class="checkbox" type="checkbox" value="Yes">Yes
-        <input class="checkbox" type="checkbox" value="No">No
-      </label>
+        <form id="survey-form" action="/action_page.php" method="get">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label id="name-label" for="name">Full Name&colon;</label>
+                <input id="name" type="text" autocomplete="on" placeholder="Enter name here" required>
 
-        <p class="add-info">Additional comments:</p>
-        <textarea class="text" placeholder="type here."></textarea>
+                <label id="email-label" for="email">Email&colon;</label>
+                <input id="email" type="email" autocomplete="on" placeholder="email@text.com" required>
 
-      <button type="submit" id="submit" name="submit">Submit</button>
-      </div>
-  </form>
-</main>
-  <footer>
-  <p>made with &hearts;</p>
-  <time datetime="07-15-2024">July, 2024</time>
-  <h4>Jacob Z</h4>
-       <address>
-        <p>1234 A Stree Dr.</p>
-    <p>Miamisburg, ohio</p>
-    <p>45342</p>
+                <label id="number-label" for="number">Age&colon;</label>
+                <input id="number" type="number" autocomplete="on" min="13" max="120" placeholder="...">
+            </fieldset>
+            <label for="dropdown" id="dropdown-label">How did you hear about us?</label>
+            <select id="dropdown" name="drowdown">
+                <option>--please choose one--</option>
+                <option value="Friend">Friend</option>
+                <option value="Billboard">Billboard</option>
+                <option value="Online">Online</option>
+                <option value="Television">Television</option>
+                <option value="Other">Other</option>
+            </select>
+            <label id="other-option-label" for="other-option-details">Other:</label>
+            <input type="text" id="other-option-details" placeholder="Please specift other">
 
-    </address>
-  </footer>
+            <fieldset>
+                <legend>Method of Contact</legend>
+                <label for="contact" id="contact1">Phone</label>
+                <input type="radio" name="contact" value="Phone call">
+                <label for="contact" id="contact2">Text</label>
+                <input type="radio" name="contact" value="Text message">
+                <label for="contact" id="contact3">Email</label>
+                <input type="radio" name="contact" value="Email">
+            </fieldset>
+
+            <fieldset>
+                <legend>Would you recommend us?</legend>
+                <label for="reccomend" id="reccomend1">Yes</label>
+                <input name="reccomend" type="checkbox" value="Yes">
+                <label for="reccomend" id="reccomend2">No</label>
+                <input name="reccomend" type="checkbox" value="No">
+            </fieldset>
+            <label for="comments">Additional Comments:</label>
+            <textarea name="comments" id="comments" rows="5" cols="20" placeholder="type here."></textarea>
+
+            <button type="submit" id="submit" name="submit">Submit</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <h4>Jacob Z</h4>
+        <p>made with &hearts;</p>
+        <time datetime="07-15-2024">July, 2024</time>
+        <address>
+            <p>1234 A Stree Dr.</p>
+            <p>Miamisburg, ohio</p>
+            <p>45342</p>
+        </address>
+    </footer>
+
 </body>
-
 </html>
