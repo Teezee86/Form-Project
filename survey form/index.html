@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Survey form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="header">
+<hgroup>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you For taking the time to tell us how we are doing!</p>
+  </hgroup>
+  </header>
+  <main>
+  <form id="survey-form" action="/action_page.php" method="get">
+    <div class="form-container">
+      <label id="name-label" class="form-text" for="name">Full Name:
+        <input class="form-text" id="name" type="text" placeholder="Enter name here" required>
+      </label>
+      <label id="email-label" class="form-text" for="email">Email:
+        <input class="form-text" id="email" type="email" placeholder="email@text.com" required>
+      </label>
+      <label id="number-label" class="form-text" for="number">Age:
+        <input class="form-text" id="number" type="number" min="13" max="120" placeholder="...">
+      </label>
+      <label id="dropdown-label" for="dropdown">
+        How did you hear about us?
+        <select class="form-text" id="dropdown">
+          <option>--please choose one--</option>
+          <option>Friend</option>
+          <option>Billboard</option>
+          <option>Online</option>
+          <option>Television</option>
+        </select>
+      </label>
+
+        <label id="rate-label" for="checkbox">On a scale of 1 through 5, 5 being the best, please rate our service.
+        </label>
+        <div class="radio-container">
+      <input class="radio" type="radio" name="radioname" value="1">1
+      <input class="radop" type="radio" name="radioname" value="2">2
+      <input class="radio" type="radio" name="radioname" value="3">3
+      <input class="radop" type="radio" name="radioname" value="4">4
+      <input class="radio" type="radio" name="radioname" value="5">5
+
+    </div>
+      <label id="radio-label" for="radioname">Would you recommend us?
+        <input class="checkbox" type="checkbox" value="Yes">Yes
+        <input class="checkbox" type="checkbox" value="No">No
+      </label>
+
+        <p class="add-info">Additional comments:</p>
+        <textarea class="text" placeholder="type here."></textarea>
+
+      <button type="submit" id="submit" name="submit">Submit</button>
+      </div>
+  </form>
+</main>
+  <footer>
+  <p>made with &hearts;</p>
+  <time datetime="07-15-2024">July, 2024</time>
+  <h4>Jacob Z</h4>
+       <address>
+        <p>1234 A Stree Dr.</p>
+    <p>Miamisburg, ohio</p>
+    <p>45342</p>
+
+    </address>
+  </footer>
+</body>
+
+</html>
